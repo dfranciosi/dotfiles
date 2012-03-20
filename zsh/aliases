@@ -8,16 +8,25 @@ alias ll="ls -l"
 alias la='ls -A'
 
 # git
-alias gl='git pull'
-alias gp='git push'
+alias gpl='git pull origin'
+alias gup='git smart-pull'
+alias gl='git smart-log'
+alias gp='git push origin'
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
+alias gcm='git commit -am'
 alias gco='git checkout'
+alias gcb='git checkout -b'
 alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`--; cat CHANGELOG*'
+
+# add "g" as a git executable
+alias g='git'
+complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
+	|| complete -o default -o nospace -F _git g
 
 # rails
 alias sc='script/console'
