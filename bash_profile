@@ -44,3 +44,6 @@ source $BASH_IT/bash_it.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# npm
+export PATH="/usr/local/share/npm/bin:$PATH"
