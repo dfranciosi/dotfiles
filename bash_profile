@@ -4,7 +4,8 @@
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add rvm gems and nginx to the path
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin
+#export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
@@ -21,7 +22,7 @@ export EDITOR="/usr/bin/vim"
 export GIT_EDITOR='/usr/bin/vim'
 
 # Set the path nginx
-export NGINX_PATH='/opt/nginx'
+# export NGINX_PATH='/opt/nginx'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
@@ -41,9 +42,3 @@ export TODO="t"
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# npm
-export PATH="/usr/local/share/npm/bin:$PATH"
