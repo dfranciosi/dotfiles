@@ -39,14 +39,15 @@
       Bundle 'mattn/gist-vim'
       Bundle 'mattn/webapi-vim'
       Bundle 'SearchComplete'
-      Bundle 'TaskList.vim'
+      " Bundle 'TaskList.vim'
       Bundle 'mru.vim'
     " General Vim end
 
     " Color Schemes
         Bundle 'altercation/vim-colors-solarized'
         " Bundle 'cschlueter/vim-ir_black'
-        Bundle 'Zenburn'
+        " Bundle 'Zenburn'
+        Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
         Bundle 'flazz/vim-colorschemes'
         " Bundle 'werks.vim'
     " Color Schemes end
@@ -56,7 +57,7 @@
       Bundle 'HTML-AutoCloseTag'
       Bundle 'juvenn/mustache.vim'
       " Bundle 'groenewege/vim-less'
-      Bundle 'Rykka/colorv.vim'
+      " Bundle 'Rykka/colorv.vim'
       Bundle 'gregsexton/MatchTag'
       Bundle 'wavded/vim-stylus'
       Bundle 'JavaScript-Indent'
@@ -113,8 +114,7 @@
   set history=256                " Number of things to remember in history.
   set notimeout
   set ttimeout
-  set timeoutlen=50             " Time to wait after ESC (default causes an
-  " annoying delay)
+  set timeoutlen=50              " Time to wait after ESC (default causes an annoying delay)
   set clipboard+=unnamed         " Yanks go on clipboard instead.
   set modeline
   set modelines=5                " default numbers of lines to read for
@@ -122,8 +122,7 @@
   set autoread
   set directory=/tmp/           " prepend(^=) $HOME/.tmp/ to default path;
   " use full path as backup filename(//)
-  set hidden                     " The current buffer can be put to the
-  " background without writing to disk
+  set hidden                     " The current buffer can be put to the background without writing to disk
   set hlsearch                   " highlight search
   set incsearch                  " show matches while typing
   let g:is_posix = 1             " vim's default is archaic bourne shell,
@@ -144,7 +143,7 @@
   set showmatch                 " Show matching brackets.
   set novisualbell              " No blinking
   set noerrorbells              " No noise.
-  set cc=121 " Right column
+  " set cc=121 " Right column
   set encoding=utf8
   set ai "Auto indent
   set si "Smart indet
@@ -158,7 +157,7 @@
   set wildignore=*.swp,*.bak,*.pyc,*.class,*.png,*.jpg,*.gif,*.swf,*.fla,*.pdf,*.zip,*.sassc,*.scssc,.DS_Store
 
   try
-      lang en_US
+    lang en_US
   catch
   endtry
   "set exrc			" enable per-directory .vimrc files
@@ -205,6 +204,20 @@
   " Fugitive
   map <silent> <Leader>gb :Gblame<CR>
   map <silent> <Leader>gs :Gstatus<CR>
+  map <silent> <Leader>gd :Gdiff<CR>
+  map <silent> <Leader>gl :Glog<CR>
+  map <silent> <Leader>gc :Gcommit<CR>
+  map <silent> <Leader>gp :Git push<CR>
+
+  map <silent> <Leader>W call RetabAndSave()
+
+
+  " Resize windows quickly
+  " reset with -=
+  nmap <leader>l :vertical res +60<cr>
+  nmap <leader>h :vertical res -60<cr>
+  nmap <leader>j :res +30<cr>
+  nmap <leader>k :res -30<cr>
 
 " Keymaps end
 
@@ -252,7 +265,7 @@
 " Vim Plugin Configs
   set background=dark
   "set t_Co=256
-  colorscheme molokai
+  colorscheme Tomorrow-Night-Bright
   "let g:solarized_termcolors=256
   "let g:solarized_termcolors=16
   call togglebg#map("<F5>")
@@ -289,23 +302,14 @@
   let g:syntastic_check_on_open=0
   "let g:syntastic_auto_loc_list=1
   "let g:ropevim_guess_project=1
-  let g:syntastic_mode_map = { 'mode': 'active',
-                                  \ 'active_filetypes': [],
-                                  \ 'passive_filetypes': ['java'] }
   let g:Powerline_symbols = 'fancy'
 
 " Vim Plugin Configs end
 
 " Custom functions FTW
-  function! g:ToogleNERDTreeLikeAChamp()
-    "Opens NERDTree if closed, focus on NERDTree if open
-    "and focus on a file or (FINALLY) close when focused on the NERDTree
-    if exists("t:NERDTreeBufName")
-      if (bufwinnr(t:NERDTreeBufName) != -1)
-        :wincmd w
-        return
-      endif
-    endif
-    :NERDTreeToggle
-endfunction
+  function RetabAndSave()
+    %s/\s\+$//e
+    retab
+    w
+  endfunction
 " Custom functions FTW end
