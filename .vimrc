@@ -41,6 +41,8 @@
       Bundle 'SearchComplete'
       " Bundle 'TaskList.vim'
       Bundle 'mru.vim'
+      Bundle 'tpope/vim-unimpaired'
+      Bundle 'ervandew/supertab'
     " General Vim end
 
     " Color Schemes
@@ -80,6 +82,7 @@
       Bundle 'tpope/vim-haml'
       Bundle 'tpope/vim-rails'
       Bundle 'tpope/vim-rake'
+      Bundle 'skalnik/vim-vroom'
     " Ruby end
 
     " Misc
