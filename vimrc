@@ -158,7 +158,17 @@
   set shortmess=at " Hide enter to continue for external apps - GIT
 
   " Set ignore list
-  set wildignore=*.swp,*.bak,*.pyc,*.class,*.png,*.jpg,*.gif,*.swf,*.fla,*.pdf,*.zip,*.sassc,*.scssc,.DS_Store
+  set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem          " Disable output and VCS files
+  set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz                      " Disable archive files
+  set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/* " Ignore bundler and sass cache
+  set wildignore+=*.swp,*~,._*i,.DS_Store                                      " Disable temp and backup files
+  set wildignore+=*.png,*.gif,*.jpg,*.jpeg                                     " Ignore non-text files
+  set wildignore+=*/public/assets/*                                            " Ignore precompiled assets
+
+
+  " Open new split panes to right and bottom, which feels more natural
+  set splitbelow
+  set splitright
 
   try
     lang en_US
@@ -212,9 +222,6 @@
   map <silent> <Leader>gl :Glog<CR>
   map <silent> <Leader>gc :Gcommit<CR>
   map <silent> <Leader>gp :Git push<CR>
-
-  map <silent> <Leader>W call RetabAndSave()
-
 
   " Resize windows quickly
   " reset with -=
@@ -311,9 +318,4 @@
 " Vim Plugin Configs end
 
 " Custom functions FTW
-  function RetabAndSave()
-    %s/\s\+$//e
-    retab
-    w
-  endfunction
 " Custom functions FTW end
