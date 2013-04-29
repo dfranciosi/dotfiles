@@ -43,6 +43,7 @@
       Bundle 'mru.vim'
       Bundle 'tpope/vim-unimpaired'
       Bundle 'ervandew/supertab'
+      Bundle 'bronson/vim-trailing-whitespace'
     " General Vim end
 
     " Color Schemes
