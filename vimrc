@@ -4,7 +4,7 @@
   " Setting up Vundle - the vim plugin bundler
   let iCanHazVundle=1
   let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
-  if !filereadable(vundle_readme) 
+  if !filereadable(vundle_readme)
   "if !isdirectory("~/.vim/bundle/vundle")
     echo "Installing Vundle.."
     echo ""
@@ -53,7 +53,7 @@
         Bundle 'flazz/vim-colorschemes'
         " Bundle 'werks.vim'
     " Color Schemes end
-      
+
     " Web (generic)
       Bundle 'mattn/zencoding-vim'
       Bundle 'HTML-AutoCloseTag'
@@ -66,7 +66,7 @@
       Bundle 'tangledhelix/vim-octopress'
     " Web (generic) end
 
-    " Javascript / node / coffeescript 
+    " Javascript / node / coffeescript
       Bundle 'pangloss/vim-javascript'
       Bundle 'itspriddle/vim-jquery'
       Bundle 'digitaltoad/vim-jade'
@@ -76,7 +76,7 @@
       Bundle 'mmalecki/vim-node.js'
       Bundle 'lambdalisue/nodeunit.vim'
     " Javascript / node /coffeescript end
-    
+
     " Ruby
       Bundle 'vim-ruby/vim-ruby'
       Bundle 'tpope/vim-haml'
@@ -89,7 +89,7 @@
       Bundle 'vim-scripts/nginx.vim'
       Bundle 'uguu-org/vim-matrix-screensaver'
     " Misc end
-    
+
 
     " Unused (for now)
       "Bundle 'bash-support.vim'
@@ -163,7 +163,7 @@
     lang en_US
   catch
   endtry
-  "set exrc			" enable per-directory .vimrc files
+  "set exrc     " enable per-directory .vimrc files
   "set secure         " disable unsafe commands in local .vimrc files
 
   "http://vim.wikia.com/wiki/Create_underlines,_overlines,_and_strikethroughs_using_combining_characters
@@ -172,7 +172,7 @@
   command! -range -nargs=0 Underline       call s:CombineSelection(<line1>, <line2>, '0332')
   command! -range -nargs=0 DoubleUnderline call s:CombineSelection(<line1>, <line2>, '0333')
   command! -range -nargs=0 Strikethrough   call s:CombineSelection(<line1>, <line2>, '0336')
-  
+
   function! s:CombineSelection(line1, line2, cp)
     execute 'let char = "\u'.a:cp.'"'
     execute a:line1.','.a:line2.'s/\%V[^[:cntrl:]]/&'.char.'/ge'
@@ -225,7 +225,7 @@
 " Keymaps end
 
 " Filetype overrides
-  
+
   " Ruby
     au BufRead,BufNewFile *.rb set filetype=ruby
     au BufRead,BufNewFile *.ruby set filetype=ruby
@@ -234,7 +234,7 @@
   " Javascript / Coffeescript / Node
     au BufNewFile,BufRead *.less set filetype=less
     au BufNewFile,BufRead *.coffee set filetype=coffee
-    au! BufRead,BufNewFile *.json set filetype=json 
+    au! BufRead,BufNewFile *.json set filetype=json
     au BufRead,BufNewFile *.ejs set filetype=html
     au BufRead,BufNewFile *.eco set filetype=html
     au BufNewFile,BufRead *.coffee set shiftwidth=2
@@ -274,11 +274,11 @@
   call togglebg#map("<F5>")
   let g:solarized_termtrans=1
   if has ('gui_running')
-  	if has('mac')
-  		set gfn=Monaco:h13
-  	else 
-  		set guifont=Monaco\ For\ Powerline\ 13
-  	endif
+    if has('mac')
+      set gfn=Monaco:h13
+    else
+      set guifont=Monaco\ For\ Powerline\ 13
+    endif
       set guioptions+=LlRrbmT
       set guioptions-=LlRrbmT
       "set background=light
@@ -287,18 +287,18 @@
   "    set background=light
   endif
   if has('statusline')
-  	set laststatus=2
-  	" Broken down into easily includeable segments
-  	set statusline=%<%f\    " Filename
-  	set statusline+=%{fugitive#statusline()} "  Git Hotness
-  	set statusline+=\ [%{&ff}/%Y]            " filetype
-  	set statusline+=\ [%{getcwd()}]          " current dir
+    set laststatus=2
+    " Broken down into easily includeable segments
+    set statusline=%<%f\    " Filename
+    set statusline+=%{fugitive#statusline()} "  Git Hotness
+    set statusline+=\ [%{&ff}/%Y]            " filetype
+    set statusline+=\ [%{getcwd()}]          " current dir
   endif
   let g:user_zen_expandabbr_key='<C-e>'
   syntax on                      " enable syntax
   filetype plugin indent on " load filetype plugins/indent settings
   let NERDTreeShowHidden=1
-  let NERDTreeMouseMode       =   3    
+  let NERDTreeMouseMode       =   3
   "let g:ConqueTerm_TERM = 'xterm-color256'
   let g:ConqueTerm_ReadUnfocused = 1
   let g:ConqueTerm_InsertOnEnter = 1
