@@ -276,7 +276,7 @@
 " Vim Plugin Configs
   set background=dark
   "set t_Co=256
-  colorscheme Tomorrow-Night-Bright
+  colorscheme Tomorrow-Night
   "let g:solarized_termcolors=256
   "let g:solarized_termcolors=16
   call togglebg#map("<F5>")
