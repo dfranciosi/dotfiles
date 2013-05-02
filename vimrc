@@ -35,7 +35,7 @@
       Bundle 'sjl/clam.vim'
       Bundle 'peterhoeg/vim-tmux'
       Bundle 'benmills/vimux'
-      Bundle 'Lokaltog/powerline'
+      Bundle 'Lokaltog/vim-powerline'
       Bundle 'mattn/gist-vim'
       Bundle 'mattn/webapi-vim'
       Bundle 'SearchComplete'
