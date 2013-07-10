@@ -36,6 +36,7 @@
       Bundle 'peterhoeg/vim-tmux'
       Bundle 'benmills/vimux'
       Bundle 'Lokaltog/vim-powerline'
+      Bundle 'Lokaltog/vim-easymotion'
       Bundle 'mattn/gist-vim'
       Bundle 'mattn/webapi-vim'
       Bundle 'SearchComplete'
@@ -44,6 +45,7 @@
       Bundle 'tpope/vim-unimpaired'
       Bundle 'ervandew/supertab'
       Bundle 'bronson/vim-trailing-whitespace'
+      Bundle 'skammer/vim-css-color', {'rtp': 'after/syntax/'}
     " General Vim end
 
     " Color Schemes
@@ -97,7 +99,6 @@
       "Bundle 'SuperTab'
       "Bundle 'dickeytk/status.vim'
       "Bundle 'snipMate'
-      "Bundle 'Lokaltog/vim-easymotion'
       "Bundle 'kana/vim-smartinput'
       "Bundle 'sjl/gundo.vim'
       "Bundle 'int3/vim-taglist-plus'
