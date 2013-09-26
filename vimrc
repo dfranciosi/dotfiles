@@ -319,4 +319,14 @@
 " Vim Plugin Configs end
 
 " Custom functions FTW
+  let g:ctags_path = "/usr/local/bin/ctags"
+  " Load tags from more places
+  set tags+=gems.tags
+
+  function GenCTags(target, sources)
+    execute ':! ' . g:ctags_path . ' -R -a -f ' . a:target . ' ' . a:sources
+  endfunction
+
+  command Ct     call GenCTags('tags', '.')
+  command Ctgems call GenCTags('gems.tags', '`bundle show --paths`')
 " Custom functions FTW end
