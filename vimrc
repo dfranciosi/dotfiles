@@ -78,6 +78,7 @@
       Bundle 'walm/jshint.vim'
       Bundle 'mmalecki/vim-node.js'
       Bundle 'lambdalisue/nodeunit.vim'
+      Bundle 'heartsentwined/vim-emblem'
     " Javascript / node /coffeescript end
 
     " Ruby
@@ -86,6 +87,9 @@
       Bundle 'tpope/vim-rails'
       Bundle 'tpope/vim-rake'
       Bundle 'skalnik/vim-vroom'
+      Bundle 'edsono/vim-matchit'
+      Bundle 'kana/vim-textobj-user'
+      Bundle 'nelstrom/vim-textobj-rubyblock'
     " Ruby end
 
     " Misc
