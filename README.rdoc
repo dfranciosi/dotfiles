@@ -1,11 +1,11 @@
-= Ryan Bates Dot Files
+= Diego Franciosi Dot Files
 
 These are config files to set up a system the way I like it.
 
 
 == Installation
 
-  git clone git://github.com/ryanb/dotfiles ~/.dotfiles
+  git clone git://github.com/dfranciosi/dotfiles ~/.dotfiles
   cd ~/.dotfiles
   rake install
 
