@@ -160,7 +160,8 @@
   set number                    " Line numers
   set nobackup
   set noswapfile
-  set shortmess=at " Hide enter to continue for external apps - GIT
+  set shortmess=at              " Hide enter to continue for external apps - GIT
+  set colorcolumn=80            " Highligth column 80
 
   " Set ignore list
   set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem          " Disable output and VCS files
