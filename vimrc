@@ -30,7 +30,6 @@
       Bundle 'taglist.vim'
       Bundle 'mutewinter/vim-indent-guides'
       Bundle 'rosenfeld/conque-term'
-      Bundle 'kien/ctrlp.vim'
       "Bundle 'scrooloose/syntastic'
       Bundle 'sjl/clam.vim'
       Bundle 'peterhoeg/vim-tmux'
@@ -58,7 +57,7 @@
     " Color Schemes end
 
     " Web (generic)
-      Bundle 'mattn/zencoding-vim'
+      Bundle 'mattn/emmet-vim'
       Bundle 'HTML-AutoCloseTag'
       Bundle 'juvenn/mustache.vim'
       " Bundle 'groenewege/vim-less'
