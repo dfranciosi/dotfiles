@@ -28,7 +28,7 @@
       Bundle 'loremipsum'
       Bundle 'majutsushi/tagbar'
       Bundle 'taglist.vim'
-      Bundle 'mutewinter/vim-indent-guides'
+      "Bundle 'mutewinter/vim-indent-guides'
       Bundle 'rosenfeld/conque-term'
       "Bundle 'scrooloose/syntastic'
       Bundle 'sjl/clam.vim'
@@ -42,7 +42,7 @@
       " Bundle 'TaskList.vim'
       Bundle 'mru.vim'
       Bundle 'tpope/vim-unimpaired'
-      Bundle 'ervandew/supertab'
+      "Bundle 'ervandew/supertab'
       Bundle 'bronson/vim-trailing-whitespace'
       Bundle 'skammer/vim-css-color', {'rtp': 'after/syntax/'}
     " General Vim end
@@ -85,11 +85,16 @@
       Bundle 'tpope/vim-haml'
       Bundle 'tpope/vim-rails'
       Bundle 'tpope/vim-rake'
+      Bundle 'tpope/vim-endwise'
       Bundle 'skalnik/vim-vroom'
       Bundle 'edsono/vim-matchit'
       Bundle 'kana/vim-textobj-user'
       Bundle 'nelstrom/vim-textobj-rubyblock'
     " Ruby end
+
+    " Puppet
+      Bundle 'rodjek/vim-puppet'
+    " Puppet end
 
     " Misc
       Bundle 'vim-scripts/nginx.vim'
@@ -236,6 +241,9 @@
   nmap <leader>k :res -30<cr>
 
 " Keymaps end
+
+" Abbreviations
+  ab bp require 'pry'; binding.pry;
 
 " Filetype overrides
 
