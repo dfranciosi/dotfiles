@@ -144,6 +144,7 @@
   set sts=2
   set sw=2
   set expandtab
+  set backspace=2
   " set tw=120
   " set winwidth=120 nice idea, but a bit annoying on small terminalz
   " set winminwidth=120
