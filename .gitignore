@@ -1,2 +1,7 @@
-vim/.netrwhist
-vim/.VimballRecord
+.DS_Store
+.svn
+*~
+.*.swp
+Procfile
+tags
+vim/bundle/**

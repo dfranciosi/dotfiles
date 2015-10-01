@@ -24,6 +24,8 @@
       Bundle 'jeetsukumaran/vim-buffergator'
       Bundle 'rking/ag.vim'
       Bundle 'tpope/vim-fugitive'
+      Bundle 'tpope/vim-git'
+      Bundle 'airblade/vim-gitgutter'
       Bundle 'kien/ctrlp.vim'
       Bundle 'loremipsum'
       Bundle 'majutsushi/tagbar'
@@ -45,6 +47,7 @@
       "Bundle 'ervandew/supertab'
       Bundle 'bronson/vim-trailing-whitespace'
       Bundle 'skammer/vim-css-color', {'rtp': 'after/syntax/'}
+      Bundle 'gabrielelana/vim-markdown'
     " General Vim end
 
     " Color Schemes
@@ -66,6 +69,7 @@
       Bundle 'wavded/vim-stylus'
       Bundle 'JavaScript-Indent'
       Bundle 'tangledhelix/vim-octopress'
+      Bundle 'slim-template/vim-slim'
     " Web (generic) end
 
     " Javascript / node / coffeescript
@@ -320,7 +324,8 @@
   syntax on                      " enable syntax
   filetype plugin indent on " load filetype plugins/indent settings
   let NERDTreeShowHidden=1
-  let NERDTreeMouseMode       =   3
+  let NERDTreeMouseMode=3
+  let g:NERDTreeDirArrows=0
   "let g:ConqueTerm_TERM = 'xterm-color256'
   let g:ConqueTerm_ReadUnfocused = 1
   let g:ConqueTerm_InsertOnEnter = 1
