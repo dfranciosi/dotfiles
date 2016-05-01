@@ -36,7 +36,7 @@
       Bundle 'sjl/clam.vim'
       Bundle 'peterhoeg/vim-tmux'
       Bundle 'benmills/vimux'
-      Bundle 'Lokaltog/vim-powerline'
+      Bundle 'powerline/powerline'
       Bundle 'Lokaltog/vim-easymotion'
       Bundle 'mattn/gist-vim'
       Bundle 'mattn/webapi-vim'
@@ -82,6 +82,7 @@
       Bundle 'mmalecki/vim-node.js'
       Bundle 'lambdalisue/nodeunit.vim'
       Bundle 'heartsentwined/vim-emblem'
+      Bundle 'digitaltoad/vim-pug'
     " Javascript / node /coffeescript end
 
     " Ruby
