@@ -337,6 +337,9 @@
 
 " Vim Plugin Configs end
 
+" ES6
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+
 " Custom functions FTW
   let g:ctags_path = "/usr/local/bin/ctags"
   " Load tags from more places
