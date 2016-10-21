@@ -1,134 +1,130 @@
 " Mine vim config
 
 " Vundle
-  " Setting up Vundle - the vim plugin bundler
-  let iCanHazVundle=1
-  let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
-  if !filereadable(vundle_readme)
-  "if !isdirectory("~/.vim/bundle/vundle")
-    echo "Installing Vundle.."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    let iCanHazVundle=0
-  endif
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-  Bundle 'gmarik/vundle'
-  " Setting up Vundle - the vim plugin bundler end
+  set nocompatible              " be iMproved, required
+  filetype off                  " required
 
-  " Bundles
+  " set the runtime path to include Vundle and initialize
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+  " alternatively, pass a path where Vundle should install plugins
+  "call vundle#begin('~/some/path/here')
+  "
+  " let Vundle manage Vundle, required
+  Plugin 'VundleVim/Vundle.vim'
+
+  " Plugins
     " General Vim
-      Bundle 'scrooloose/nerdtree'
-      Bundle 'scrooloose/nerdcommenter'
-      Bundle 'jeetsukumaran/vim-buffergator'
-      Bundle 'rking/ag.vim'
-      Bundle 'tpope/vim-fugitive'
-      Bundle 'tpope/vim-git'
-      Bundle 'airblade/vim-gitgutter'
-      Bundle 'kien/ctrlp.vim'
-      Bundle 'loremipsum'
-      Bundle 'majutsushi/tagbar'
-      Bundle 'taglist.vim'
-      "Bundle 'mutewinter/vim-indent-guides'
-      Bundle 'rosenfeld/conque-term'
-      "Bundle 'scrooloose/syntastic'
-      Bundle 'sjl/clam.vim'
-      Bundle 'peterhoeg/vim-tmux'
-      Bundle 'benmills/vimux'
-      Bundle 'powerline/powerline'
-      Bundle 'Lokaltog/vim-easymotion'
-      Bundle 'mattn/gist-vim'
-      Bundle 'mattn/webapi-vim'
-      Bundle 'SearchComplete'
-      " Bundle 'TaskList.vim'
-      Bundle 'mru.vim'
-      Bundle 'tpope/vim-unimpaired'
-      "Bundle 'ervandew/supertab'
-      Bundle 'bronson/vim-trailing-whitespace'
-      Bundle 'skammer/vim-css-color', {'rtp': 'after/syntax/'}
-      Bundle 'gabrielelana/vim-markdown'
+      Plugin 'scrooloose/nerdtree'
+      Plugin 'scrooloose/nerdcommenter'
+      Plugin 'scrooloose/syntastic'
+      Plugin 'jeetsukumaran/vim-buffergator'
+      Plugin 'rking/ag.vim'
+      Plugin 'tpope/vim-fugitive'
+      Plugin 'tpope/vim-git'
+      Plugin 'airblade/vim-gitgutter'
+      Plugin 'kien/ctrlp.vim'
+      Plugin 'loremipsum'
+      Plugin 'majutsushi/tagbar'
+      Plugin 'taglist.vim'
+      "Plugin 'mutewinter/vim-indent-guides'
+      Plugin 'rosenfeld/conque-term'
+      "Plugin 'scrooloose/syntastic'
+      Plugin 'sjl/clam.vim'
+      Plugin 'peterhoeg/vim-tmux'
+      Plugin 'benmills/vimux'
+      Plugin 'powerline/powerline'
+      Plugin 'Lokaltog/vim-easymotion'
+      Plugin 'mattn/gist-vim'
+      Plugin 'mattn/webapi-vim'
+      Plugin 'SearchComplete'
+      " Plugin 'TaskList.vim'
+      Plugin 'mru.vim'
+      Plugin 'tpope/vim-unimpaired'
+      "Plugin 'ervandew/supertab'
+      Plugin 'bronson/vim-trailing-whitespace'
+      Plugin 'skammer/vim-css-color', {'rtp': 'after/syntax/'}
     " General Vim end
 
     " Color Schemes
-        Bundle 'altercation/vim-colors-solarized'
-        " Bundle 'cschlueter/vim-ir_black'
-        " Bundle 'Zenburn'
-        Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-        Bundle 'flazz/vim-colorschemes'
-        " Bundle 'werks.vim'
+      Plugin 'altercation/vim-colors-solarized'
+      " Plugin 'cschlueter/vim-ir_black'
+      " Plugin 'Zenburn'
+      Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+      Plugin 'flazz/vim-colorschemes'
+        " Plugin 'werks.vim'
     " Color Schemes end
 
     " Web (generic)
-      Bundle 'mattn/emmet-vim'
-      Bundle 'HTML-AutoCloseTag'
-      Bundle 'juvenn/mustache.vim'
-      " Bundle 'groenewege/vim-less'
-      " Bundle 'Rykka/colorv.vim'
-      Bundle 'gregsexton/MatchTag'
-      Bundle 'wavded/vim-stylus'
-      Bundle 'JavaScript-Indent'
-      Bundle 'tangledhelix/vim-octopress'
-      Bundle 'slim-template/vim-slim'
+      Plugin 'mattn/emmet-vim'
+      Plugin 'HTML-AutoCloseTag'
+      Plugin 'juvenn/mustache.vim'
+      " Plugin 'groenewege/vim-less'
+      " Plugin 'Rykka/colorv.vim'
+      Plugin 'gregsexton/MatchTag'
+      Plugin 'wavded/vim-stylus'
+      Plugin 'JavaScript-Indent'
+      Plugin 'tangledhelix/vim-octopress'
+      Plugin 'slim-template/vim-slim'
     " Web (generic) end
 
     " Javascript / node / coffeescript
-      Bundle 'pangloss/vim-javascript'
-      Bundle 'itspriddle/vim-jquery'
-      Bundle 'digitaltoad/vim-jade'
-      Bundle 'leshill/vim-json'
-      Bundle 'kchmck/vim-coffee-script'
-      Bundle 'walm/jshint.vim'
-      Bundle 'mmalecki/vim-node.js'
-      Bundle 'lambdalisue/nodeunit.vim'
-      Bundle 'heartsentwined/vim-emblem'
-      Bundle 'digitaltoad/vim-pug'
+      Plugin 'othree/yajs.vim', { 'for': 'javascript' }
+      Plugin 'mxw/vim-jsx'
+      Plugin 'pangloss/vim-javascript'
+      Plugin 'itspriddle/vim-jquery'
+      Plugin 'digitaltoad/vim-jade'
+      Plugin 'leshill/vim-json'
+      Plugin 'kchmck/vim-coffee-script'
+      Plugin 'walm/jshint.vim'
+      Plugin 'mmalecki/vim-node.js'
+      Plugin 'lambdalisue/nodeunit.vim'
+      Plugin 'heartsentwined/vim-emblem'
+      Plugin 'digitaltoad/vim-pug'
+      Plugin 'moll/vim-node'
     " Javascript / node /coffeescript end
 
     " Ruby
-      Bundle 'vim-ruby/vim-ruby'
-      Bundle 'tpope/vim-haml'
-      Bundle 'tpope/vim-rails'
-      Bundle 'tpope/vim-rake'
-      Bundle 'tpope/vim-endwise'
-      Bundle 'skalnik/vim-vroom'
-      Bundle 'edsono/vim-matchit'
-      Bundle 'kana/vim-textobj-user'
-      Bundle 'nelstrom/vim-textobj-rubyblock'
+      Plugin 'vim-ruby/vim-ruby'
+      Plugin 'tpope/vim-haml'
+      Plugin 'tpope/vim-rails'
+      Plugin 'tpope/vim-rake'
+      Plugin 'tpope/vim-endwise'
+      Plugin 'skalnik/vim-vroom'
+      Plugin 'edsono/vim-matchit'
+      Plugin 'kana/vim-textobj-user'
+      Plugin 'nelstrom/vim-textobj-rubyblock'
     " Ruby end
 
     " Puppet
-      Bundle 'rodjek/vim-puppet'
+      Plugin 'rodjek/vim-puppet'
     " Puppet end
 
     " Misc
-      Bundle 'vim-scripts/nginx.vim'
-      Bundle 'uguu-org/vim-matrix-screensaver'
+      Plugin 'vim-scripts/nginx.vim'
+      Plugin 'uguu-org/vim-matrix-screensaver'
     " Misc end
 
 
     " Unused (for now)
-      "Bundle 'bash-support.vim'
-      "Bundle 'SuperTab'
-      "Bundle 'dickeytk/status.vim'
-      "Bundle 'snipMate'
-      "Bundle 'kana/vim-smartinput'
-      "Bundle 'sjl/gundo.vim'
-      "Bundle 'int3/vim-taglist-plus'
-      "Bundle 'reinh/vim-makegreen'
-      "Bundle 'flomotlik/vim-livereload'
+      "Plugin 'bash-support.vim'
+      "Plugin 'SuperTab'
+      "Plugin 'dickeytk/status.vim'
+      "Plugin 'snipMate'
+      "Plugin 'kana/vim-smartinput'
+      "Plugin 'sjl/gundo.vim'
+      "Plugin 'int3/vim-taglist-plus'
+      "Plugin 'reinh/vim-makegreen'
+      "Plugin 'flomotlik/vim-livereload'
     " Unused (for now) end
-  " Bundles end
+  " Plugins end
 
-  if iCanHazVundle == 0
-      echo "Installing Bundles, please ignore key map error messages"
-      echo ""
-  :BundleInstall
-  endif
+  " All of your Plugins must be added before the following line
+  call vundle#end()            " required
+  filetype plugin indent on    " required
 " Vundle end
 
 "Set Vim defaults
-  set nocompatible               " be iMproved
   set history=256                " Number of things to remember in history.
   set notimeout
   set ttimeout
@@ -172,6 +168,8 @@
   set noswapfile
   set shortmess=at              " Hide enter to continue for external apps - GIT
   set colorcolumn=80            " Highligth column 80
+  let g:jsx_ext_required = 0
+  let g:syntastic_javascript_checkers = ['eslint']
 
   " Set ignore list
   set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem          " Disable output and VCS files
@@ -342,6 +340,7 @@ autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 " Custom functions FTW
   let g:ctags_path = "/usr/local/bin/ctags"
+  let g:gitgutter_realtime = 0
   " Load tags from more places
   set tags+=gems.tags
 
